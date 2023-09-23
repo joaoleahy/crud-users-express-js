@@ -1,26 +1,15 @@
-class Usuario {
-    constructor(nome, email, senha, nickname, idade, cidade) {
-      this.nome = nome;
-      this.email = email;
-      this.senha = senha;
-      this.nickname = nickname;
-      this.idade = idade;
-      this.cidade = cidade;
-      this.ativo = true;
-    }
-  
-    fazerLogin(email, senha) {
-      if (this.email === email && this.senha === senha) {
-        return true;
-      } else {
-        return false;
-      }
-    }
-  
-    fazerLogout() {
-      this.ativo = false;
-    }
-  }
-  
-  module.exports = Usuario;
-  
+const mongoose = require('mongoose');
+
+const usuarioSchema = new mongoose.Schema({
+  nome: String,
+  email: String,
+  senha: String,
+  nickname: String,
+  idade: Number,
+  cidade: String,
+  ativo: Boolean,
+});
+
+const Usuario = mongoose.model('Usuario', usuarioSchema);
+
+module.exports = Usuario;
