@@ -7,8 +7,7 @@ Este é um projeto simples de um CRUD (Create, Read, Update, Delete) de usuário
 A estrutura de pastas do projeto é organizada da seguinte forma:
 
 ```plaintext
-meu-projeto/
-|-- node_modules/            (pasta com as dependências do Node.js)
+crud-users-express-js/
 |-- routes/                  (pasta para as rotas da aplicação)
 |   |-- usuarioRoutes.js     (arquivo com as rotas do CRUD de usuários)
 |-- models/                  (pasta para os modelos de dados)
@@ -35,11 +34,13 @@ node app.js
 O servidor será executado na porta 3000 por padrão. Você pode acessar as rotas do CRUD de usuários a partir do endpoint http://localhost:3000/usuarios.
 
 ## Rotas
+```plaintext
 POST /usuarios: Cria um novo usuário.
 GET /usuarios: Lista todos os usuários.
 GET /usuarios/:email: Busca um usuário pelo email.
 PUT /usuarios/:email: Atualiza um usuário pelo email.
 DELETE /usuarios/:email: Exclui um usuário pelo email.
+```
 
 ## Modelo de Usuário
 A classe Usuario representa o modelo de usuário. Ela possui os seguintes atributos:
