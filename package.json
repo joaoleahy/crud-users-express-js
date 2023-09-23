@@ -1,0 +1,24 @@
+{
+  "name": "crud-users-express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joaoleahy/crud-users-express-js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joaoleahy/crud-users-express-js/issues"
+  },
+  "homepage": "https://github.com/joaoleahy/crud-users-express-js#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "memory-cache": "^0.2.0"
+  }
+}
