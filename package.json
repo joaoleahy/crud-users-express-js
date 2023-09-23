@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/joaoleahy/crud-users-express-js#readme",
   "dependencies": {
+    "dotenv": "^16.3.1",
     "express": "^4.18.2",
-    "memory-cache": "^0.2.0"
+    "memory-cache": "^0.2.0",
+    "mongoose": "^7.5.2"
   }
 }
