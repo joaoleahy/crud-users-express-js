@@ -45,6 +45,7 @@ DELETE /usuarios/:email: Exclui um usuário pelo email.
 ## Modelo de Usuário
 A classe Usuario representa o modelo de usuário. Ela possui os seguintes atributos:
 
+```plaintext
 nome: Nome do usuário.
 email: Endereço de e-mail do usuário.
 senha: Senha do usuário.
@@ -52,5 +53,7 @@ nickname: Nickname do usuário.
 idade: Idade do usuário.
 cidade: Cidade do usuário.
 ativo: Estado de atividade do usuário.
+```
+
 ## Contribuição
 Sinta-se à vontade para contribuir com melhorias ou correções neste projeto. Basta criar um fork deste repositório, fazer suas alterações e enviar um pull request.
