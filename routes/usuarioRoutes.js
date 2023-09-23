@@ -1,7 +1,26 @@
 const express = require('express');
 const router = express.Router();
-const cache = require('memory-cache');
-const Usuario = require('./models/usuario');
+const Usuario = require('../models/Usuario');
+const { geraToken, verificaToken } = require('../auth');
+
+// Rota para login e obtenção de token JWT
+router.post('/login', async (req, res) => {
+  const { email, senha } = req.body;
+
+  try {
+    const usuario = await Usuario.findOne({ email });
+
+    if (!usuario || usuario.senha !== senha) {
+      return res.status(401).json({ mensagem: 'Credenciais inválidas' });
+    }
+
+    const token = geraToken(usuario);
+    res.json({ token });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ mensagem: 'Erro no servidor' });
+  }
+});
 
 // Rota para criar um usuário
 router.post('/usuarios', (req, res) => {
